@@ -1,4 +1,14 @@
 import * as model from './model.js';
-import { getPosition } from './helper.js';
 
-getPosition();
+const controlLocation = async function () {
+  try {
+    await model.loadCurrentPosition();
+    await model.loadCurrentWeather();
+
+    console.log(model.state);
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+controlLocation();
