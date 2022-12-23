@@ -16,6 +16,24 @@ const createLocationObject = function (data) {
   };
 };
 
+const createWeatherObject = function (data) {
+  let curWeather = data;
+  return {
+    address: curWeather.resolvedAddress,
+    description: curWeather.description,
+    alerts: curWeather.alerts,
+    descriptionCondition: curWeather.currentConditions.conditions,
+    humidity: curWeather.currentConditions.humidity,
+    iconWeather: curWeather.currentConditions.icon,
+    sunrise: curWeather.currentConditions.sunrise,
+    sunset: curWeather.currentConditions.sunset,
+    temperature: curWeather.currentConditions.temp,
+    uvindex: curWeather.currentConditions.uvindex,
+    windspeed: curWeather.currentConditions.windspeed,
+    hoursWeather: curWeather.days[0].hours,
+  };
+};
+
 export const loadCurrentPosition = async function () {
   try {
     const location = await getPosition();
@@ -33,7 +51,7 @@ export const loadCurrentPosition = async function () {
 export const loadCurrentWeather = async function () {
   try {
     const dataWeather = await getJSON(`${API_URL_WEATHER}${state.location.locality}?key=${KEY_WEATHER}`);
-    console.log(dataWeather);
+    state.weather = createWeatherObject(dataWeather);
   } catch (err) {
     throw err;
   }

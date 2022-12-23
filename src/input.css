@@ -73,13 +73,13 @@
   @apply container my-1 h-52 w-11/12 overflow-hidden rounded-md bg-gradient-to-br  from-sunset  via-bgSecondary to-sunrise  lg:h-96;
 }
 .container__day-list {
-  @apply flex h-full overflow-auto p-5 lg:flex-col lg:text-lg;
+  @apply flex h-full  overflow-auto p-5 lg:flex-col lg:text-lg;
 }
 .line__days {
   @apply mx-auto hidden w-[88%] border-t-2 border-black opacity-40 lg:block;
 }
 .items__day {
-  @apply mx-1 flex flex-col items-center justify-around   lg:mx-0 lg:my-4 lg:flex-row lg:items-start;
+  @apply mx-5  flex flex-col items-center   justify-around lg:mx-0 lg:my-4 lg:flex-row lg:items-start;
 }
 
 /*Line 64 */

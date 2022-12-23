@@ -572,8 +572,9 @@ video {
   max-width: 20rem;
 }
 
-.font-bold {
-  font-weight: 700;
+.bg-red-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
 }
 
 .opacity-50 {
@@ -949,8 +950,8 @@ video {
 }
 
 .items__day {
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
