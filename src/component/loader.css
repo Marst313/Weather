@@ -1,56 +1,53 @@
+/* https://uiverse.io/mrhyddenn/curvy-insect-3 */
+
 .loader {
-  width: 150px;
-  height: 150px;
-  border-left: 5px solid #38ff8e;
-  border-radius: 50%;
-  animation: right5231 0.9s linear infinite;
-  margin: 50px;
-  position: absolute;
-  top: 0;
-  left: 20%;
+  position: relative;
+  width: 110px;
+  height: 30px;
+  background: #dfd3c3;
+  border-radius: 100px;
 }
 
-.loader::before,
-.loader::after {
+.loader::before {
   content: '';
-  width: 120px;
-  height: 120px;
-  display: block;
   position: absolute;
-  top: calc(50% - 60px);
-  left: calc(50% - 60px);
-  border-right: 5px solid #ffbe0b;
+  top: -20px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  background: #dfd3c3;
   border-radius: 50%;
-  animation: left036 0.9s linear infinite;
-  box-sizing: border-box;
+  box-shadow: 40px 0 0 20px #dfd3c3;
 }
 
-.loader::after {
-  width: 90px;
-  height: 90px;
-  top: calc(50% - 45px);
-  left: calc(50% - 45px);
-  border: 0;
-  border-top: 5px solid #ff086e;
-  animation: none;
+.snow {
+  position: relative;
+  display: flex;
+  z-index: 1;
 }
 
-@keyframes right5231 {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.snow span {
+  position: relative;
+  width: 3px;
+  height: 3px;
+  background: #fff;
+  margin: 0 2px;
+  border-radius: 50%;
+  animation: snowing 5s linear infinite;
+  animation-duration: calc(15s / var(--i));
+  transform-origin: bottom;
 }
 
-@keyframes left036 {
-  from {
-    transform: rotate(720deg);
+@keyframes snowing {
+  0% {
+    transform: translateY(0px);
   }
 
-  to {
-    transform: rotate(0deg);
+  70% {
+    transform: translateY(100px) scale(1);
+  }
+
+  100% {
+    transform: translateY(100px) scale(0);
   }
 }

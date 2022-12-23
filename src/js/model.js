@@ -31,6 +31,7 @@ const createWeatherObject = function (data) {
     uvindex: curWeather.currentConditions.uvindex,
     windspeed: curWeather.currentConditions.windspeed,
     hoursWeather: curWeather.days[0].hours,
+    weekly: curWeather.days,
   };
 };
 

@@ -33,3 +33,10 @@ export const getPosition = function () {
   });
   return pos;
 };
+
+export const slider = function () {
+  setTimeout(function (second) {
+    console.log(`Data coming ${second} second`);
+  }),
+    second * 1000;
+};

@@ -13,15 +13,18 @@
   background-position-x: -970px; /*sun -970px */ /*night -680px */
   background-position-y: -150px; /* sun -150px */ /* nigth -30px */
 
-  @apply bg-[url('/public/image/sun.jpg')] bg-auto bg-fixed bg-no-repeat  font-Lato  md:bg-center; /* md:bg-top */
+  @apply bg-[url('/public/image/sun.jpg')] bg-auto bg-fixed bg-no-repeat  font-Lato  md:bg-cover md:bg-center; /* md:bg-top */
 }
 
 /*Line 13*/
 .container-weather {
-  @apply flex w-full flex-row items-start justify-between p-5;
+  @apply flex w-full flex-row items-start justify-between  p-5;
 }
 
 /*Line 15*/
+.container__logo {
+  @apply w-1/2;
+}
 .logo {
   @apply flex h-[100px] w-[100px] rounded-full border-4  bg-primary/70  p-3 lg:h-[120px] lg:w-[120px];
 }
@@ -31,29 +34,32 @@
 
 /*Line 21*/
 .container__input {
-  @apply flex max-w-sm flex-col flex-wrap;
+  @apply flex w-1/2 max-w-sm flex-col flex-wrap  md:items-end;
 }
 
 /*Line 24*/
+.container__input > form {
+  @apply w-52 items-start;
+}
 .search-icon {
   @apply absolute top-[0.3rem] left-[0.3rem] ml-1 h-8 w-8;
 }
 .search-btn {
-  @apply h-8 w-[7rem] rounded-full bg-primary pl-10 pr-3 shadow-lg placeholder:text-black placeholder:text-opacity-50 focus:bg-white focus:bg-opacity-75 focus:outline-none focus:placeholder:text-transparent md:w-[10rem];
+  @apply h-8 w-[7rem] rounded-full bg-primary pl-10 pr-3 shadow-lg placeholder:text-center placeholder:text-xs placeholder:text-black placeholder:text-opacity-50 focus:bg-white focus:bg-opacity-75 focus:outline-none focus:placeholder:text-transparent md:w-[10rem] md:placeholder:text-base lg:w-full;
 }
 
 /*Line 27*/
 .container__current-weather__field-temp {
-  @apply mt-2 text-4xl font-black;
+  @apply mt-2 text-3xl font-black;
 }
 .container__current-location {
-  @apply flex items-center justify-center;
+  @apply flex w-52 items-center justify-between;
 }
 .container__current-weather__field-location {
   @apply text-xs lg:text-base;
 }
 .container__current-weather-location-icon {
-  @apply ml-2 h-8 w-8 animate-bounce;
+  @apply h-8 w-8 animate-bounce;
 }
 .field-day-time {
   @apply text-xs font-semibold lg:text-base;
@@ -73,7 +79,7 @@
   @apply container my-1 h-52 w-11/12 overflow-hidden rounded-md bg-gradient-to-br  from-sunset  via-bgSecondary to-sunrise  lg:h-96;
 }
 .container__day-list {
-  @apply flex h-full  overflow-auto p-5 lg:flex-col lg:text-lg;
+  @apply relative flex  h-full overflow-auto p-5 lg:flex-col lg:text-lg;
 }
 .line__days {
   @apply mx-auto hidden w-[88%] border-t-2 border-black opacity-40 lg:block;
@@ -94,15 +100,24 @@
 .container__description {
   box-shadow: -2px 2px 5px 1px rgba(0, 0, 0, 1);
 
-  @apply container my-1 flex h-24 w-11/12 flex-col items-center justify-around rounded-md bg-gradient-to-br  from-sunset  via-bgSecondary to-sunrise p-2;
+  @apply container relative my-1 flex h-24 w-11/12 flex-col items-center justify-around rounded-md  bg-gradient-to-br  from-sunset via-bgSecondary to-sunrise p-2;
+}
+.container-display__description {
+  @apply flex items-center justify-center;
 }
 .field-description {
-  @apply mt-1 text-center text-base font-semibold;
+  @apply mt-1 text-center text-sm font-semibold md:text-base;
 }
-
+.field-description__condition {
+  @apply mt-1 hidden translate-x-[100%] text-center text-sm font-semibold md:text-base;
+}
 /*Line 85 */
 .dots {
-  @apply mx-1 mt-2 h-3 w-3 rounded-full bg-secondary;
+  @apply absolute top-0 bottom-0  h-2 w-2  rounded-full bg-primary md:h-3 md:w-3;
+}
+
+.dots:nth-child(2) {
+  @apply mx-auto ml-6 md:ml-10;
 }
 
 .container__weeks {
@@ -161,4 +176,9 @@
 .container__map {
   box-shadow: -2px 2px 5px 1px rgba(0, 0, 0, 1);
   @apply container my-1 mb-5 h-80 w-11/12 rounded-md bg-gradient-to-br  from-sunset  via-bgSecondary  to-sunrise lg:mb-1 lg:h-full;
+}
+
+/* LOADER */
+.loader {
+  @apply mx-auto mt-[20%] md:mt-[10%] lg:mt-[40%];
 }

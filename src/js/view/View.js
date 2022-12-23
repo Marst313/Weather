@@ -1,21 +1,9 @@
 export default class View {
   _data;
 
-  // render(data) {
-  //   this._data = data;
-
-  //   console.log(data);
-  //   console.log(this._parentElement);
-  //   const markup = this.generateMarkup();
-
-  //   this._parentElement.inserAdjecentHTML('afterbegin', markup);
-  // }
   render(data) {
     this._data = data;
-    console.log(data);
-
     const markup = this._generateMarkup();
-    console.log(this._parentElement);
 
     this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
@@ -27,7 +15,32 @@ export default class View {
 
   renderSpinner() {
     const markup = `
-    <div class="loader"></div>`;
+      <div class="loader">
+        <div class="snow">
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:15"></span>
+            <span style="--i:17"></span>
+            <span style="--i:18"></span>
+            <span style="--i:13"></span>
+            <span style="--i:14"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+            <span style="--i:10"></span>
+            <span style="--i:18"></span>
+            <span style="--i:13"></span>
+            <span style="--i:14"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+            <span style="--i:10"></span>
+            <span style="--i:18"></span>
+            <span style="--i:13"></span>
+            <span style="--i:14"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+            <span style="--i:10"></span>
+        </div>
+      </div>`;
 
     this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);

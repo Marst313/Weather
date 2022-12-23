@@ -18,10 +18,12 @@
     <div class="container mx-auto w-full">
       <div class="container-weather">
         <!-- Logo -->
-        <div class="logo">
-          <img src="public/image/hASIL.png" alt="Logo-Marst-Weather-small" />
+        <div class="container__logo">
+          <div class="logo">
+            <img src="public/image/hASIL.png" alt="Logo-Marst-Weather-small" />
+          </div>
         </div>
-        <img src="public/image/Black-Sun2.png" alt="Logo-Marst-Name" class="logo-Marst-Name bg-red-300" id="Logo-Marst-Name" />
+        <img src="public/image/Black-Sun2.png" alt="Logo-Marst-Name" class="logo-Marst-Name" id="Logo-Marst-Name" />
 
         <!-- Logo -->
 
@@ -70,11 +72,14 @@
         </div>
 
         <div class="container__description">
-          <p class="display__description field-description">Similar temperatures continuing with a chance of rain</p>
+          <div class="container-display__description">
+            <!--  <p class="display__description field-description">Similar temperatures continuing with a chance of rain</p>
+            <p class="display__description field-description field-description__condition">Rain, Overcast</p> -->
+          </div>
 
-          <div class="container__dots flex">
-            <!-- <button class="dots"></button>
-            <button class="dots opacity-50"></button> -->
+          <div class="container__dots relative flex items-center justify-center">
+            <button class="dots" data-dots="0"></button>
+            <button class="dots" data-dots="1"></button>
           </div>
         </div>
       </div>
@@ -194,7 +199,6 @@
     <!-- End Main Component -->
 
     <!-- Loaderr -->
-    <!-- <div class="loader"></div> -->
   </body>
   <!-- <script src="script.js"></script> -->
 </html>

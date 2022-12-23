@@ -572,9 +572,12 @@ video {
   max-width: 20rem;
 }
 
-.bg-red-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .opacity-50 {
@@ -599,6 +602,7 @@ video {
 
 @media (min-width: 768px) {
   .body {
+    background-size: cover;
     background-position: center;
   }
 }
@@ -619,6 +623,10 @@ video {
 }
 
 /*Line 15*/
+
+.container__logo {
+  width: 50%;
+}
 
 .logo {
   display: flex;
@@ -669,12 +677,24 @@ video {
 
 .container__input {
   display: flex;
+  width: 50%;
   max-width: 24rem;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
+@media (min-width: 768px) {
+  .container__input {
+    align-items: flex-end;
+  }
+}
+
 /*Line 24*/
+
+.container__input > form {
+  width: 13rem;
+  align-items: flex-start;
+}
 
 .search-icon {
   position: absolute;
@@ -699,11 +719,17 @@ video {
 }
 
 .search-btn::-moz-placeholder {
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
   color: rgb(0 0 0 / var(--tw-text-opacity));
   --tw-text-opacity: 0.5;
 }
 
 .search-btn::placeholder {
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
   color: rgb(0 0 0 / var(--tw-text-opacity));
   --tw-text-opacity: 0.5;
 }
@@ -727,21 +753,38 @@ video {
   .search-btn {
     width: 10rem;
   }
+
+  .search-btn::-moz-placeholder {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .search-btn::placeholder {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .search-btn {
+    width: 100%;
+  }
 }
 
 /*Line 27*/
 
 .container__current-weather__field-temp {
   margin-top: 0.5rem;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
   font-weight: 900;
 }
 
 .container__current-location {
   display: flex;
+  width: 13rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .container__current-weather__field-location {
@@ -757,7 +800,6 @@ video {
 }
 
 .container__current-weather-location-icon {
-  margin-left: 0.5rem;
   height: 2rem;
   width: 2rem;
 }
@@ -918,6 +960,7 @@ video {
 }
 
 .container__day-list {
+  position: relative;
   display: flex;
   height: 100%;
   overflow: auto;
@@ -1022,6 +1065,7 @@ video {
 }
 
 .container__description {
+  position: relative;
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
   display: flex;
@@ -1041,25 +1085,75 @@ video {
   padding: 0.5rem;
 }
 
+.container-display__description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .field-description {
   margin-top: 0.25rem;
   text-align: center;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .field-description {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.field-description__condition {
+  margin-top: 0.25rem;
+  display: none;
+  --tw-translate-x: 100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .field-description__condition {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 /*Line 85 */
 
 .dots {
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
-  margin-top: 0.5rem;
-  height: 0.75rem;
-  width: 0.75rem;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  height: 0.5rem;
+  width: 0.5rem;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
-  background-color: rgb(211 78 38 / var(--tw-bg-opacity));
+  background-color: rgb(var(--warna-tema)/ var(--tw-bg-opacity));
+}
+
+@media (min-width: 768px) {
+  .dots {
+    height: 0.75rem;
+    width: 0.75rem;
+  }
+}
+
+.dots:nth-child(2) {
+  margin-left: auto;
+  margin-right: auto;
+  margin-left: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .dots:nth-child(2) {
+    margin-left: 2.5rem;
+  }
 }
 
 .container__weeks {
@@ -1371,5 +1465,25 @@ video {
   .container__map {
     margin-bottom: 0.25rem;
     height: 100%;
+  }
+}
+
+/* LOADER */
+
+.loader {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+}
+
+@media (min-width: 768px) {
+  .loader {
+    margin-top: 10%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .loader {
+    margin-top: 40%;
   }
 }

@@ -3,4 +3,4 @@ export const KEY_WEATHER = 'NNS9LYV4KRXJ27464LBL69AGK ';
 
 export const API_URL_LOCATION = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=`;
 
-export const TIMEOUT_SEC = 2;
+export const TIMEOUT_SEC = 10;
