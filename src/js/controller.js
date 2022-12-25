@@ -1,9 +1,10 @@
 import * as model from './model.js';
 import weatherViewHour from './view/weatherViewHour.js';
+import WeatherViewWeekly from './view/weatherViewHour.js';
 import View from './view/View.js';
 import descriptionView from './view/descriptionView.js';
 
-const controlWeather = async function () {
+const controlRenderWeather = async function () {
   try {
     weatherViewHour.renderSpinner();
     //1. Load Current Position
@@ -30,8 +31,16 @@ const controlSlide = async function () {
 };
 
 const controlDots = function () {
-  controlWeather();
+  // 1. initialitation the weather data
+  controlRenderWeather();
+
+  // 2. Activated dots
   descriptionView.activeDots(0);
+
+  // 3. When dots get clicked make the other dots opacity-50
+  descriptionView.addHandlerEvent();
+
+  // 4. Activated the description
 };
 
 controlDots();

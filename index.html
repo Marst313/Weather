@@ -68,7 +68,22 @@
 
       <div class="container__main main__1">
         <div class="container__day">
-          <ul class="container__day-list"></ul>
+          <ul class="container__day-list">
+            <!-- <li class="items__day">
+      <p>${el.datetime.slice(0, -3)}</p>
+        <svg class="weather-icon">
+          <use href="public/image/icons.svg#icon-${el.icon} "></use>
+        </svg>
+      <p class="font-bold">${this._celciusToFahrenheit(el.temp)}°</p>
+      <div class="container__weather-icon">
+        <svg class="weather-icon">
+          <use href="public/image/icons.svg#icon-water "></use>
+          <span>${Math.ceil(el.humidity)}%</span>
+        </svg>
+      </div>
+  </li>
+  <hr class="line__days" /> -->
+          </ul>
         </div>
 
         <div class="container__description">
@@ -77,9 +92,9 @@
             <p class="display__description field-description field-description__condition">Rain, Overcast</p> -->
           </div>
 
-          <div class="container__dots relative flex items-center justify-center">
+          <div class="container__dots relative mt-2 flex items-center justify-center">
             <button class="dots" data-dots="0"></button>
-            <button class="dots" data-dots="1"></button>
+            <button class="dots opacity-50" data-dots="1"></button>
           </div>
         </div>
       </div>

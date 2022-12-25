@@ -103,21 +103,17 @@
   @apply container relative my-1 flex h-24 w-11/12 flex-col items-center justify-around rounded-md  bg-gradient-to-br  from-sunset via-bgSecondary to-sunrise p-2;
 }
 .container-display__description {
-  @apply flex items-center justify-center;
+  @apply flex h-10  items-center justify-center  text-center;
 }
 .field-description {
-  @apply mt-1 text-center text-sm font-semibold md:text-base;
+  @apply mt-1 hidden text-center text-sm font-semibold md:text-base;
 }
 .field-description__condition {
-  @apply mt-1 hidden translate-x-[100%] text-center text-sm font-semibold md:text-base;
+  @apply mt-1   text-center text-sm font-semibold md:text-base;
 }
 /*Line 85 */
 .dots {
-  @apply absolute top-0 bottom-0  h-2 w-2  rounded-full bg-primary md:h-3 md:w-3;
-}
-
-.dots:nth-child(2) {
-  @apply mx-auto ml-6 md:ml-10;
+  @apply mx-1 mt-2  h-2 w-2 rounded-full bg-primary md:h-3 md:w-3 xl:mb-2 xl:mt-3;
 }
 
 .container__weeks {
@@ -181,4 +177,11 @@
 /* LOADER */
 .loader {
   @apply mx-auto mt-[20%] md:mt-[10%] lg:mt-[40%];
+}
+
+.active {
+  display: block;
+}
+.not-active {
+  display: hidden;
 }
