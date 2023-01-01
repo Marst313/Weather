@@ -13,7 +13,7 @@
 
     <title>Weather App</title>
   </head>
-  <body class="body">
+  <body class="body [url('/public/image/sun.jpg')]">
     <!-- Navbar TOP -->
     <div class="container mx-auto w-full">
       <div class="container-weather">
@@ -40,7 +40,7 @@
 
           <!-- Description -->
           <div class="container__current-weather max-w-xs">
-            <h1 class="container__current-weather__field-temp">28°</h1>
+            <!-- <h1 class="container__current-weather__field-temp">28°</h1>
 
             <div class="container__current-location">
               <p class="container__current-weather__field-location">Minomartani, Yogyakarta</p>
@@ -52,7 +52,7 @@
             <p class="container__current-weather field-day-time">
               Kamis,
               <span> 14:00</span>
-            </p>
+            </p> -->
           </div>
           <!-- Description -->
         </div>
@@ -103,42 +103,14 @@
       <!-- Main 2 -->
       <div class="container__main main__2">
         <div class="container__weeks">
-          <ul class="container__weeks-list">
-            <li class="container__weeks-items">
-              <p>Today</p>
-
-              <div class="flex">
-                <svg class="weather-icon">
-                  <use href="public/image/icons.svg#icon-water "></use>
-                </svg>
-                <span>100%</span>
-              </div>
-
-              <!-- Icons -->
-              <div class="container__weeks-icons">
-                <svg class="weeks__icons">
-                  <use href="public/image/icons.svg#icon-lightning"></use>
-                </svg>
-
-                <svg class="weeks__icons">
-                  <use href="public/image/icons.svg#icon-rainy "></use>
-                </svg>
-              </div>
-              <!-- Icons -->
-
-              <div class="container__weeks-temp">
-                <p>29°</p>
-                <p>22°</p>
-              </div>
-            </li>
-          </ul>
+          <ul class="container__weeks-list"></ul>
         </div>
 
         <!-- Container Sunrise Sunset -->
         <div class="container__suns-condition">
-          <div>
+          <div class="container__sun">
             <p>Sunrise</p>
-            <p>05.09</p>
+            <p class="field__sun-datetime"></p>
             <svg xmlns="http://www.w3.org/2000/svg" width="57" height="41" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
               <path
                 fill="#ff7a00"
@@ -149,9 +121,9 @@
           </div>
           <hr class="hr" />
 
-          <div>
+          <div class="container__sun">
             <p>Sunset</p>
-            <p>17.40</p>
+            <p class="field__sun-datetime"></p>
             <svg xmlns="http://www.w3.org/2000/svg" width="57" height="41" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
               <path
                 fill="#ff00c7"

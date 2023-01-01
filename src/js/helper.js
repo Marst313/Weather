@@ -40,3 +40,19 @@ export const slider = function () {
   }),
     second * 1000;
 };
+
+export const getCurrentDay = function () {
+  const d = new Date();
+
+  const fullDate = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+
+  return fullDate;
+};
+
+export const getNoDay = function () {
+  const d = new Date();
+
+  const nameDay = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+  return nameDay[d.getDay()];
+};

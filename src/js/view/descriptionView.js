@@ -7,8 +7,6 @@ class DescriptionView extends View {
   _dotsFirst = document.querySelector('.dots[data-dots="0"]');
 
   _generateMarkup() {
-    console.log(this._data);
-
     return `
     <p class="display__description field-description active " data-attribute="0">${this._data.description}</p>
     <p class="display__description field-description field-description__condition " data-attribute="1">${this._data.descriptionCondition}</p>

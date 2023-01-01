@@ -12,8 +12,9 @@
 .body {
   background-position-x: -970px; /*sun -970px */ /*night -680px */
   background-position-y: -150px; /* sun -150px */ /* nigth -30px */
+  text-shadow: -1px 1px 2px black, -2px 2px 4px #9c2c77;
 
-  @apply bg-[url('/public/image/sun.jpg')] bg-auto bg-fixed bg-no-repeat  font-Lato  md:bg-cover md:bg-center; /* md:bg-top */
+  @apply bg- bg-auto bg-fixed bg-no-repeat  font-Lato  md:bg-cover md:bg-center; /* md:bg-top */
 }
 
 /*Line 13*/
@@ -39,7 +40,7 @@
 
 /*Line 24*/
 .container__input > form {
-  @apply w-52 items-start;
+  @apply items-start md:w-52;
 }
 .search-icon {
   @apply absolute top-[0.3rem] left-[0.3rem] ml-1 h-8 w-8;
@@ -49,14 +50,17 @@
 }
 
 /*Line 27*/
+.container__current-weather {
+  @apply text-white;
+}
 .container__current-weather__field-temp {
   @apply mt-2 text-3xl font-black;
 }
 .container__current-location {
-  @apply flex w-52 items-center justify-between;
+  @apply flex w-28 items-center justify-between  md:w-52;
 }
 .container__current-weather__field-location {
-  @apply text-xs lg:text-base;
+  @apply text-xs font-bold lg:text-base;
 }
 .container__current-weather-location-icon {
   @apply h-8 w-8 animate-bounce;
@@ -123,10 +127,16 @@
   @apply container my-1 h-72 w-11/12 rounded-md bg-gradient-to-br  from-sunset  via-bgSecondary  to-sunrise lg:h-96;
 }
 .container__weeks-list {
-  @apply flex flex-col p-2;
+  @apply flex flex-col  p-2;
 }
 .container__weeks-items {
   @apply my-1 flex justify-around;
+}
+.container__weeks-items > p {
+  @apply w-12 self-center text-xs md:w-20 md:text-base;
+}
+.container__weeks-items > div > span {
+  @apply self-center text-xs md:text-base;
 }
 .container__weeks-icons {
   @apply flex flex-row items-center justify-center;
@@ -138,7 +148,10 @@
   @apply flex;
 }
 .container__weeks-temp > p {
-  @apply mx-[5px];
+  @apply mx-[5px] self-center text-xs md:text-base;
+}
+.weekly-active {
+  @apply rounded-sm bg-orange-300 bg-opacity-50;
 }
 
 /* Line 126 */
@@ -148,6 +161,9 @@
 }
 .container__suns-condition > div {
   @apply flex flex-col items-center justify-around p-1 font-bold;
+}
+.container__sun > p {
+  @apply text-xs tracking-wide md:text-base;
 }
 .hr {
   @apply h-2/3 self-center border-l-2 border-black;

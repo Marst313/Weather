@@ -601,6 +601,7 @@ video {
   background-position-y: -150px;
   /* sun -150px */
   /* nigth -30px */
+  text-shadow: -1px 1px 2px black, -2px 2px 4px #9c2c77;
   background-image: url('/public/image/sun.jpg');
   background-size: auto;
   background-attachment: fixed;
@@ -700,8 +701,13 @@ video {
 /*Line 24*/
 
 .container__input > form {
-  width: 13rem;
   align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .container__input > form {
+    width: 13rem;
+  }
 }
 
 .search-icon {
@@ -781,6 +787,11 @@ video {
 
 /*Line 27*/
 
+.container__current-weather {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .container__current-weather__field-temp {
   margin-top: 0.5rem;
   font-size: 1.875rem;
@@ -790,14 +801,21 @@ video {
 
 .container__current-location {
   display: flex;
-  width: 13rem;
+  width: 7rem;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .container__current-location {
+    width: 13rem;
+  }
 }
 
 .container__current-weather__field-location {
   font-size: 0.75rem;
   line-height: 1rem;
+  font-weight: 700;
 }
 
 @media (min-width: 1024px) {
@@ -1228,6 +1246,34 @@ video {
   justify-content: space-around;
 }
 
+.container__weeks-items > p {
+  width: 3rem;
+  align-self: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container__weeks-items > p {
+    width: 5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.container__weeks-items > div > span {
+  align-self: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container__weeks-items > div > span {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
 .container__weeks-icons {
   display: flex;
   flex-direction: row;
@@ -1247,6 +1293,22 @@ video {
 .container__weeks-temp > p {
   margin-left: 5px;
   margin-right: 5px;
+  align-self: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container__weeks-temp > p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.weekly-active {
+  border-radius: 0.125rem;
+  background-color: rgb(253 186 116 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.5;
 }
 
 /* Line 126 */
@@ -1316,6 +1378,19 @@ video {
   justify-content: space-around;
   padding: 0.25rem;
   font-weight: 700;
+}
+
+.container__sun > p {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.025em;
+}
+
+@media (min-width: 768px) {
+  .container__sun > p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 .hr {

@@ -1,5 +1,4 @@
-import { getPosition } from './helper.js';
-import { getJSON } from './helper.js';
+import { getNoDay, getPosition, getJSON, getCurrentDay } from './helper.js';
 import { API_URL_WEATHER, API_URL_LOCATION, KEY_WEATHER } from './config.js';
 
 export const state = {
@@ -32,6 +31,8 @@ const createWeatherObject = function (data) {
     windspeed: curWeather.currentConditions.windspeed,
     hoursWeather: curWeather.days[0].hours,
     weekly: curWeather.days,
+    currentDay: getCurrentDay(),
+    day: getNoDay(),
   };
 };
 

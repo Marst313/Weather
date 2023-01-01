@@ -45,4 +45,9 @@ export default class View {
     this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
+
+  _celciusToFahrenheit(value) {
+    value = ((value - 32) * 5) / 9;
+    return Math.ceil(value);
+  }
 }

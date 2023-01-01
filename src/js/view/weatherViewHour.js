@@ -3,11 +3,6 @@ import View from './View.js';
 class WeatherViewHour extends View {
   _parentElement = document.querySelector('.container__day-list');
 
-  _celciusToFahrenheit(value) {
-    value = ((value - 32) * 5) / 9;
-    return Math.ceil(value);
-  }
-
   _generateMarkup() {
     const data = this._data.hoursWeather
       .map((el) => {
