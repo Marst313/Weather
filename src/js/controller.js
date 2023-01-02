@@ -59,6 +59,7 @@ const controlSearchResults = async function () {
 
 const init = async function () {
   try {
+    weatherViewHour.renderSpinner();
     // 1. initialitation the weather data
     await model.loadCurrentPosition();
     await model.loadCurrentWeather();

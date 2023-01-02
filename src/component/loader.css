@@ -62,7 +62,7 @@
 }
 
 .container-weather > .img-logo:hover {
-  box-shadow: 2px 4px #1368a2, 4px 6px #39397c, 6px 8px #1d74db, 8px 10px #00d4ff;
+  box-shadow: 4px 6px rgba(0, 0, 0, 0.5);
 }
 .container-weather > .img-logo:hover img {
   animation: rotateText 2s linear infinite;
