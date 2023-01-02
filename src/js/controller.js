@@ -3,6 +3,8 @@ import searchView from './view/searchView.js';
 import weatherViewHour from './view/weatherViewHour.js';
 import descriptionView from './view/descriptionView.js';
 import weatherViewWeekly from './view/weatherViewWeekly.js';
+import conditionView from './view/conditionView.js';
+import mapView from './view/mapView.js';
 
 const controlRenderWeather = async function () {
   try {
@@ -26,6 +28,10 @@ const controlRenderWeather = async function () {
     weatherViewWeekly.render(model.state.weather);
 
     weatherViewWeekly.markingCurrentDay();
+
+    mapView.render();
+
+    conditionView.render(model.state.weather);
   } catch (err) {
     console.error(err);
   }

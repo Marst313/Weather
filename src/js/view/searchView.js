@@ -4,8 +4,6 @@ class SearchView extends View {
   _parentElement = document.querySelector('.container__current-weather');
 
   _generateMarkup() {
-    console.log(this._data);
-
     this._getTime(this._data);
     return `
     <h1 class="container__current-weather__field-temp">28°</h1>
@@ -37,8 +35,19 @@ class SearchView extends View {
 
       const night = +data.weather.sunset.split(':').join('').slice(0, 4);
       const day = +data.weather.sunrise.split(':').join('').slice(0, 4);
-      if (+clock.split(':').join('').slice(0, 4) > night) {
-        body.classList.remove(`[url('/public/image/sun.jpg')]`);
+      let curr = +`${d.getHours() > 9 ? d.getHours() : `0${d.getHours()}`}${d.getMinutes() > 9 ? d.getMinutes() : `0${d.getMinutes()}`}${d.getSeconds() > 9 ? d.getSeconds() : `0${d.getSeconds()}`}`.slice(0, 4);
+
+      // Media Querry
+      let x = window.matchMedia('(min-width: 768px)');
+
+      if (curr > night) {
+        body.style.backgroundImage = "url('/public/image/night.jpg')";
+        body.style.backgroundPosition = '-680px -30px';
+        body.style.backgroundPosition = 'top';
+      } else {
+        body.style.backgroundImage = "url('/public/image/sun.jpg')";
+        body.style.backgroundPosition = '-970px -150px';
+        body.style.backgroundPosition = `${x.matches ? 'center' : ''}`;
       }
     }
   }

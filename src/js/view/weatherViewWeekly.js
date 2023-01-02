@@ -81,10 +81,9 @@ class WeatherViewWeekly extends View {
     let d = new Date();
     let clock = +`${d.getHours() > 9 ? d.getHours() : `0${d.getHours()}`}${d.getMinutes() > 9 ? d.getMinutes() : `0${d.getMinutes()}`}${d.getSeconds() > 9 ? d.getSeconds() : `0${d.getSeconds()}`}`.slice(0, 4);
 
+    if (clock === 2400) location.reload();
     return clock;
   }
 }
 
 export default new WeatherViewWeekly();
-
-// const nameDay = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
