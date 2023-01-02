@@ -8,6 +8,8 @@ class WeatherViewWeekly extends View {
   }
 
   _generateMarkup() {
+    this._clear();
+
     let d = new Date();
     let day = d.getDay();
 

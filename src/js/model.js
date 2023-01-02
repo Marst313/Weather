@@ -46,7 +46,6 @@ export const loadCurrentPosition = async function () {
 
     state.location = createLocationObject(dataLocationAPI);
   } catch (err) {
-    console.error(`${err} 🌋🌋`);
     throw err;
   }
 };

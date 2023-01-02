@@ -29,8 +29,11 @@
 .logo {
   @apply flex h-[100px] w-[100px] rounded-full border-4  bg-primary/70  p-3 lg:h-[120px] lg:w-[120px];
 }
-.container-weather > img:nth-child(2) {
-  @apply absolute mt-32 w-40  p-3 shadow-md hover:cursor-pointer  md:mr-60 lg:mt-0 lg:ml-40 lg:w-80;
+.container-weather > .img-logo {
+  @apply absolute mt-32 w-40  rounded-md from-sunrise via-purple-500  to-bgPrimary p-3 shadow-md hover:cursor-pointer hover:bg-gradient-to-r md:mr-60 lg:mt-0 lg:ml-40 lg:w-80;
+}
+.container-weather > .img-logo > img {
+  @apply hover:transition-transform group-hover:translate-x-3;
 }
 
 /*Line 21*/
@@ -68,10 +71,13 @@
 .field-day-time {
   @apply text-xs font-semibold lg:text-base;
 }
+.search-field {
+  @apply mx-auto mt-36 text-center text-base text-white lg:mt-0;
+}
 
 /*Line 56 */
 .main {
-  @apply mt-32 justify-center text-white lg:mt-14 lg:flex;
+  @apply mt-5 justify-center text-white lg:mt-2 lg:flex;
 }
 /*Line 53 , 225 ,499 */
 .container__main {

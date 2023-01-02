@@ -27,7 +27,7 @@ const controlRenderWeather = async function (data) {
 
     conditionView.render(data);
   } catch (err) {
-    console.error(err);
+    console.error(`${err},🌋🌋🌋🌋`);
   }
 };
 
@@ -53,7 +53,7 @@ const controlSearchResults = async function () {
     controlRenderWeather(model.state.search);
     //2. rendering search result
   } catch (err) {
-    throw err;
+    weatherViewHour.renderError();
   }
 };
 
@@ -77,7 +77,7 @@ const init = async function () {
 
     // weatherViewWeekly.generateDay();
   } catch (err) {
-    throw err;
+    searchView.renderError();
   }
 };
 

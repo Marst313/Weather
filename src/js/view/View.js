@@ -45,6 +45,16 @@ export default class View {
     this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
+  renderError(message = this._errorMessage) {
+    const markup = `
+    <div role="alert" class="absolute top-0  mx-auto bg-red-50 left-[50%]">
+    <div class="rounded-t bg-red-500 px-4 py-2 font-bold text-white">Error</div>
+    <div class="rounded-b border border-t-0 border-red-400 bg-red-100 px-4 py-3 text-red-700">
+      <p>${message}</p>
+    </div>
+  </div>`;
+    this._parentElement.insertAdjacentHTML('beforebegin', markup);
+  }
 
   _celciusToFahrenheit(value) {
     value = ((value - 32) * 5) / 9;

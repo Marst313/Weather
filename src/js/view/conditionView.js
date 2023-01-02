@@ -4,6 +4,7 @@ class ConditionnView extends View {
   _parentElement = document.querySelector('.container__uv-index');
 
   _generateMarkup() {
+    this._clear();
     return `
     <div>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256">

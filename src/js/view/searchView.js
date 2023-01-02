@@ -3,10 +3,13 @@ import View from './View.js';
 class SearchView extends View {
   _parentElement = document.querySelector('.container__current-weather');
   _searchElement = document.querySelector('.search-bar');
+  _searchField = document.querySelector('.search-field');
+  _errorMessage = 'We could not find your position ! Turn on your gps !';
+  _message = '';
 
   _generateMarkup() {
     this._getTime(this._data);
-
+    this._clear();
     return `
     <h1 class="container__current-weather__field-temp">${this._celciusToFahrenheit(this._data.weather.temperature)}°</h1>
 
@@ -64,6 +67,7 @@ class SearchView extends View {
   getQuery() {
     const query = this._searchElement.querySelector('.search-btn').value;
     this._clearInput();
+    this._searchField.textContent = `You searching for ${query.toUpperCase()} weather `;
     return query;
   }
   _clearInput() {

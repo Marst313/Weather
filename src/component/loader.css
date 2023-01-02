@@ -38,6 +38,36 @@
   transform-origin: bottom;
 }
 
+.message,
+.error {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 5rem 4rem;
+
+  display: flex;
+
+  svg {
+    height: 3rem;
+    width: 3rem;
+    fill: $color-primary;
+    transform: translateY(-0.3rem);
+  }
+
+  p {
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    font-weight: 600;
+  }
+}
+
+.container-weather > .img-logo:hover {
+  box-shadow: 2px 4px #1368a2, 4px 6px #39397c, 6px 8px #1d74db, 8px 10px #00d4ff;
+}
+.container-weather > .img-logo:hover img {
+  animation: rotateText 2s linear infinite;
+}
+
 @keyframes snowing {
   0% {
     transform: translateY(0px);
@@ -49,5 +79,18 @@
 
   100% {
     transform: translateY(100px) scale(0);
+  }
+}
+@keyframes rotateText {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  30% {
+    transform: rotateX(100deg);
+  }
+
+  50% {
+    transform: rotateX(-100deg);
   }
 }

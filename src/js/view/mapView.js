@@ -6,6 +6,8 @@ class MapView extends View {
   _parentElement = document.querySelector('#map');
 
   _generateMarkup() {
+    this._clear();
+
     this._getPosition();
   }
 

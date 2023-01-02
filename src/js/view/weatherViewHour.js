@@ -2,8 +2,10 @@ import View from './View.js';
 
 class WeatherViewHour extends View {
   _parentElement = document.querySelector('.container__day-list');
-
+  _errorMessage = 'Cannot find your city try another one !';
+  _message = '';
   _generateMarkup() {
+    this._clear();
     const data = this._data.hoursWeather
       .map((el) => {
         return `<li class="items__day">
