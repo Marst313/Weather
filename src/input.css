@@ -27,10 +27,10 @@
   @apply w-1/2;
 }
 .logo {
-  @apply flex h-[100px] w-[100px] rounded-full border-4  bg-primary/70  p-3 lg:h-[120px] lg:w-[120px];
+  @apply flex h-[100px] w-[100px] animate-spin-slow rounded-full border-4 border-b-slate-700 border-l-gray-400 border-r-gray-300 border-t-slate-300   bg-gradient-to-b from-bgPrimary via-bgSecondary to-sunset p-3 transition-all lg:h-[120px] lg:w-[120px];
 }
 .container-weather > .img-logo {
-  @apply absolute mt-32 w-40  rounded-md from-sunrise via-purple-500  to-bgPrimary p-3 shadow-md hover:cursor-pointer hover:bg-gradient-to-r md:mr-60 lg:mt-0 lg:ml-40 lg:w-80;
+  @apply absolute mt-32 w-40 rounded-md  p-3  shadow-md  hover:cursor-pointer hover:backdrop-blur-md md:mr-60 lg:mt-0 lg:ml-40 lg:w-80;
 }
 .container-weather > .img-logo > img {
   @apply hover:transition-transform group-hover:translate-x-3;
@@ -49,7 +49,7 @@
   @apply absolute top-[0.3rem] left-[0.3rem] ml-1 h-8 w-8;
 }
 .search-btn {
-  @apply h-8 w-[7rem] rounded-full bg-primary pl-10 pr-3 shadow-lg placeholder:text-center placeholder:text-xs placeholder:text-black placeholder:text-opacity-50 focus:bg-white focus:bg-opacity-75 focus:outline-none focus:placeholder:text-transparent md:w-[10rem] md:placeholder:text-base lg:w-full;
+  @apply h-8 w-[7rem] rounded-full bg-white bg-opacity-50 pl-10 pr-3 shadow-lg placeholder:text-center placeholder:text-xs placeholder:text-black placeholder:text-opacity-50 focus:bg-white focus:bg-opacity-75 focus:outline-none focus:placeholder:text-transparent md:w-[10rem] md:placeholder:text-base lg:w-full;
 }
 
 /*Line 27*/
@@ -86,7 +86,7 @@
 
 .container__day {
   box-shadow: -2px 2px 5px 1px rgba(0, 0, 0, 1);
-  @apply container my-1 h-52 w-11/12 overflow-hidden rounded-md bg-gradient-to-br  from-sunset  via-bgSecondary to-sunrise  lg:h-96;
+  @apply container my-1 h-52 w-11/12 overflow-hidden rounded-md bg-transparent backdrop-blur-md  lg:h-96;
 }
 .container__day-list {
   @apply relative flex  h-full overflow-auto p-5 lg:flex-col lg:text-lg;
@@ -110,7 +110,7 @@
 .container__description {
   box-shadow: -2px 2px 5px 1px rgba(0, 0, 0, 1);
 
-  @apply container relative my-1 flex h-24 w-11/12 flex-col items-center justify-around rounded-md  bg-gradient-to-br  from-sunset via-bgSecondary to-sunrise p-2;
+  @apply container relative my-1 flex h-24 w-11/12 flex-col items-center justify-around rounded-md  bg-transparent p-2 backdrop-blur-lg;
 }
 .container-display__description {
   @apply flex h-10  items-center justify-center  text-center;
@@ -123,14 +123,14 @@
 }
 /*Line 85 */
 .dots {
-  @apply mx-1 mt-2  h-2 w-2 rounded-full bg-primary md:h-3 md:w-3 xl:mb-2 xl:mt-3;
+  @apply mx-1 mt-2  h-2 w-2 rounded-full bg-black bg-opacity-70 md:h-3 md:w-3 xl:mb-2 xl:mt-3;
 }
 
 .container__weeks {
   box-shadow: -2px 2px 5px 1px rgba(0, 0, 0, 1);
 
   box-shadow: -2px 2px 5px 1px rgba(0, 0, 0, 1);
-  @apply container my-1 h-72 w-11/12 rounded-md bg-gradient-to-br  from-sunset  via-bgSecondary  to-sunrise lg:h-96;
+  @apply container my-1 h-72 w-11/12 rounded-md bg-transparent backdrop-blur-md lg:h-96;
 }
 .container__weeks-list {
   @apply flex flex-col  p-2;
@@ -157,13 +157,13 @@
   @apply mx-[5px] self-center text-xs md:text-base;
 }
 .weekly-active {
-  @apply rounded-sm bg-orange-300 bg-opacity-50;
+  @apply rounded-sm bg-black bg-opacity-30;
 }
 
 /* Line 126 */
 .container__suns-condition {
   box-shadow: -2px 2px 5px 1px rgba(0, 0, 0, 1);
-  @apply container my-1 flex h-32 w-11/12 justify-around rounded-md bg-gradient-to-br  from-sunset  via-bgSecondary  to-sunrise lg:h-96;
+  @apply container my-1 flex h-32 w-11/12 justify-around rounded-md bg-transparent backdrop-blur-md lg:h-96;
 }
 .container__suns-condition > div {
   @apply flex flex-col items-center justify-around p-1 font-bold;
@@ -178,7 +178,7 @@
 /* Line 153 */
 .container__uv-index {
   box-shadow: -2px 2px 5px 1px rgba(0, 0, 0, 1);
-  @apply container my-1 flex h-32 w-11/12 justify-around rounded-md bg-gradient-to-br  from-sunset  via-bgSecondary  to-sunrise lg:h-96;
+  @apply container my-1 flex h-32 w-11/12 justify-around rounded-md bg-transparent backdrop-blur-md lg:h-96;
 }
 .container__uv-index > div {
   @apply flex flex-col items-center justify-center lg:mt-1;

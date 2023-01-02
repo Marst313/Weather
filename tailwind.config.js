@@ -20,6 +20,7 @@ module.exports = {
         bgSecondary: '#E14D2A',
         sunrise: '#CD104D',
         sunset: '#9C2C77',
+        bgMain: '#511845',
       },
       backgroundImage: {
         'hero-pattern': "url('/public/image/sun.jpg')",
