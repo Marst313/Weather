@@ -4,6 +4,7 @@ import { API_URL_WEATHER, API_URL_LOCATION, KEY_WEATHER } from './config.js';
 export const state = {
   location: {},
   weather: {},
+  search: {},
 };
 
 const createLocationObject = function (data) {
@@ -54,6 +55,15 @@ export const loadCurrentWeather = async function () {
   try {
     const dataWeather = await getJSON(`${API_URL_WEATHER}${state.location.locality}?key=${KEY_WEATHER}`);
     state.weather = createWeatherObject(dataWeather);
+  } catch (err) {
+    throw err;
+  }
+};
+
+export const loadSearchWeather = async function (query) {
+  try {
+    const dataWeather = await getJSON(`${API_URL_WEATHER}${query}?key=${KEY_WEATHER}`);
+    state.search = createWeatherObject(dataWeather);
   } catch (err) {
     throw err;
   }

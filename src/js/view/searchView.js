@@ -2,11 +2,13 @@ import View from './View.js';
 
 class SearchView extends View {
   _parentElement = document.querySelector('.container__current-weather');
+  _searchElement = document.querySelector('.search-bar');
 
   _generateMarkup() {
     this._getTime(this._data);
+
     return `
-    <h1 class="container__current-weather__field-temp">28°</h1>
+    <h1 class="container__current-weather__field-temp">${this._celciusToFahrenheit(this._data.weather.temperature)}°</h1>
 
     <div class="container__current-location">
       <p class="container__current-weather__field-location">${this._data.location.locality}, ${this._data.location.city}</p>
@@ -50,6 +52,22 @@ class SearchView extends View {
         body.style.backgroundPosition = `${x.matches ? 'center' : ''}`;
       }
     }
+  }
+
+  addHandlerSearch(handler) {
+    this._searchElement.addEventListener('submit', function (e) {
+      e.preventDefault();
+      handler();
+    });
+  }
+
+  getQuery() {
+    const query = this._searchElement.querySelector('.search-btn').value;
+    this._clearInput();
+    return query;
+  }
+  _clearInput() {
+    this._searchElement.querySelector('.search-btn').value = '';
   }
 }
 
