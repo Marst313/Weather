@@ -49,7 +49,7 @@
   @apply absolute top-[0.3rem] left-[0.3rem] ml-1 h-8 w-8;
 }
 .search-btn {
-  @apply h-8 w-[7rem] rounded-full bg-white bg-opacity-50 pl-10 pr-3 shadow-lg placeholder:text-center placeholder:text-xs placeholder:text-black placeholder:text-opacity-50 focus:bg-white focus:bg-opacity-75 focus:outline-none focus:placeholder:text-transparent md:w-[10rem] md:placeholder:text-base lg:w-full;
+  @apply h-8 w-[10rem] rounded-full bg-white bg-opacity-50 pl-10 pr-3 shadow-lg placeholder:text-center placeholder:text-xs placeholder:text-black placeholder:text-opacity-50 focus:bg-white focus:bg-opacity-75 focus:outline-none focus:placeholder:text-transparent md:w-[10rem] md:placeholder:text-base lg:w-full;
 }
 
 /*Line 27*/
@@ -123,7 +123,7 @@
 }
 /*Line 85 */
 .dots {
-  @apply mx-1 mt-2  h-2 w-2 rounded-full bg-black bg-opacity-70 md:h-3 md:w-3 xl:mb-2 xl:mt-3;
+  @apply mx-1 mt-2  h-2 w-2 rounded-full bg-black  md:h-3 md:w-3 xl:mb-2 xl:mt-3;
 }
 
 .container__weeks {
