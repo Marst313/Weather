@@ -551,6 +551,10 @@ video {
   }
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -567,6 +571,10 @@ video {
   left: 20%;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -578,6 +586,14 @@ video {
 
 .mt-3 {
   margin-top: 0.75rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .flex {
@@ -767,20 +783,6 @@ video {
   display: flex;
   height: 100px;
   width: 100px;
-}
-
-@keyframes bestview {
-  0%, 100% {
-    transform: rotateX(0deg);
-  }
-
-  50% {
-    transform: rotateX(180deg);
-  }
-}
-
-.logo {
-  animation: bestview 5s linear infinite;
   border-radius: 9999px;
   border-width: 4px;
   border-bottom-color: rgb(51 65 85 / var(--tw-border-opacity));
@@ -1765,5 +1767,9 @@ video {
 @media (min-width: 768px) {
   .md\:left-\[40\%\] {
     left: 40%;
+  }
+
+  .md\:p-0 {
+    padding: 0px;
   }
 }

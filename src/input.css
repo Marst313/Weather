@@ -27,7 +27,7 @@
   @apply w-1/2;
 }
 .logo {
-  @apply flex h-[100px] w-[100px] animate-spin-slow rounded-full border-4 border-b-slate-700 border-l-gray-400 border-r-gray-300 border-t-slate-300   bg-gradient-to-b from-bgPrimary via-bgSecondary to-sunset p-3 transition-all lg:h-[120px] lg:w-[120px];
+  @apply flex h-[100px] w-[100px]  rounded-full border-4 border-b-slate-700 border-l-gray-400 border-r-gray-300 border-t-slate-300   bg-gradient-to-b from-bgPrimary via-bgSecondary to-sunset p-3 transition-all lg:h-[120px] lg:w-[120px];
 }
 .container-weather > .img-logo {
   @apply absolute mt-32 w-40 rounded-md  p-3  shadow-md  hover:cursor-pointer hover:backdrop-blur-md md:mr-60 lg:mt-0 lg:ml-40 lg:w-80;

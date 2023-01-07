@@ -46,11 +46,11 @@ class SearchView extends View {
       let x = window.matchMedia('(min-width: 768px)');
 
       if (curr > night) {
-        body.style.backgroundImage = "url('/public/image/night.jpg')";
+        body.style.backgroundImage = "url('/public/image/night.webp')";
         body.style.backgroundPosition = '-680px -30px';
         body.style.backgroundPosition = 'top';
       } else {
-        body.style.backgroundImage = "url('/public/image/sun.jpg')";
+        body.style.backgroundImage = "url('/public/image/sun.webp')";
         body.style.backgroundPosition = '-970px -150px';
         body.style.backgroundPosition = `${x.matches ? 'center' : ''}`;
       }

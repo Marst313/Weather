@@ -68,7 +68,7 @@
   box-shadow: 4px 6px rgba(0, 0, 0, 0.5), -4px 0px rgba(0, 0, 0, 0.5);
 }
 .container-weather > .img-logo:hover img {
-  animation: rotateText 2s linear infinite;
+  animation: rotateText 2s linear;
 }
 
 @keyframes snowing {
